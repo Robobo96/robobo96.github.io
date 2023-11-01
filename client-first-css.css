@@ -82,6 +82,14 @@ a,
     -webkit-box-orient: vertical;
 }
 
+/* Apply "..." after 1 line of text */
+.text-style-1lines {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
 /* Adds inline flex display */
 .display-inlineflex {
     display: inline-flex;
