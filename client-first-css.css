@@ -5,7 +5,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background-color: black;
+    background-color: black !important;
 }
 
 /* Focus state style for keyboard navigation for the focusable elements */
