@@ -1,4 +1,3 @@
-        // JavaScript to change the background color on page load
-        window.onload = function() {
-            document.body.style.backgroundColor = "black";
-        };
+$('.button_filter').on('click', function() {
+  $('.logo').addClass('is-hidden');
+});
