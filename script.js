@@ -1,3 +1,4 @@
-$('.button_filter').on('click', function() {
-  $('.Heading 2').addClass('is-hidden');
-});
+        // JavaScript to change the background color on page load
+        window.onload = function() {
+            document.body.style.backgroundColor = "black";
+        };
