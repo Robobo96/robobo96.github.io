@@ -3,15 +3,6 @@
 
 // © Code by T.RICKS, https://www.tricksdesign.com/
 // You have the license to use this code in your projects but not redistribute it to others
-
-// Stagger your animation
- $(".products_item-img-wrapper").each(function (i) {
-    var $item = $(this); 
-    setTimeout(function() { 
-      $item.click();
-    }, 200*i);
-    // delays the next animation by 200 milliseconds
-  });
  
 
 // TRIGGERS
@@ -42,6 +33,14 @@ $( ".your-button-class" ).mouseleave(function() {
 $('#heading-container').one('inview', function(event, isInView) {
   if (isInView) {
 		// Put the play below this line
+	  	// Stagger your animation
+ 		$(".products_item-img-wrapper").each(function (i) {
+	    		var $item = $(this); 
+	    		setTimeout(function() { 
+	      			$item.click();
+	    		}, 200*i);
+    			// delays the next animation by 200 milliseconds
+  });
   } else {
   }
 });
