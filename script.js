@@ -14,19 +14,11 @@ $(document).ready(function() {
     function animateElements() {
         $(".products_item-img").each(function(index) {
             var el = this;
-            if (isElementInViewport(el)) {
-                $(el).css({
+            if (isElementInViewport(el) && !$(el).hasClass("is-visible")) {
+                $(el).addClass("is-visible").delay(150 * index).animate({
                     "margin-left": 0,
                     "width": "100%"
-                }).delay(100 * index).animate({
-                    "margin-left": 0,
-                    "width": "100%"
-                }, 500); // You can adjust the delay and animation duration as needed
-            } else {
-                $(el).css({
-                    "margin-left": "-50%",
-                    "width": "0"
-                });
+                }, 1000); // Adjust the animation speed (1000ms for 1 second)
             }
         });
     }
