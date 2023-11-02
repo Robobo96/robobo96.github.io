@@ -10,25 +10,29 @@ $(document).ready(function() {
         );
     }
 
-    // Function to handle the animation
-    function animateIfVisible() {
-        $('.products_item-img').each(function(index) {
-            if (isElementInViewport(this) && $(this).css('width') === '0px') {
-                $(this).css({
-                    'margin-left': '50%',
-                    'width': '0%'
-                }).delay(300 * index).animate({
-                    'margin-left': '0%',
-                    'width': '100%'
-                }, {
-                    duration: 1000, // Adjust duration as needed (in milliseconds)
-                    easing: 'easeInOutCubic' // Easing function
+    // Function to handle the animation of elements
+    function animateElements() {
+        $(".products_item-img").each(function(index) {
+            var el = this;
+            if (isElementInViewport(el)) {
+                $(el).css({
+                    "margin-left": 0,
+                    "width": "100%"
+                }).delay(100 * index).animate({
+                    "margin-left": 0,
+                    "width": "100%"
+                }, 500); // You can adjust the delay and animation duration as needed
+            } else {
+                $(el).css({
+                    "margin-left": "-50%",
+                    "width": "0"
                 });
             }
         });
     }
 
-    // Call the function initially and on scroll
-    animateIfVisible();
-    $(window).on('scroll', animateIfVisible);
+    // Trigger the animation when the page loads and on scroll
+    $(window).on("load scroll", function() {
+        animateElements();
+    });
 });
