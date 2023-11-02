@@ -1,16 +1,34 @@
 $(document).ready(function() {
-    // Select all elements with the class 'products_item-img'
-    $('.products_item-img').each(function(index) {
-        // Apply initial CSS styles to set the start state of each element
-        $(this).css({
-            'margin-left': '-50%',
-            'width': '0%'
-        });
+    // Function to check if an element is in the viewport
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
-        // Animate each element with a delay using the index to create a staggered effect
-        $(this).delay(300 * index).animate({
-            'margin-left': '0%',
-            'width': '100%'
-        }, 1000); // Adjust duration as needed (in milliseconds)
-    });
+    // Function to handle the animation
+    function animateIfVisible() {
+        $('.products_item-img').each(function(index) {
+            if (isElementInViewport(this) && $(this).css('width') === '0px') {
+                $(this).css({
+                    'margin-left': '50%',
+                    'width': '0%'
+                }).delay(300 * index).animate({
+                    'margin-left': '0%',
+                    'width': '100%'
+                }, {
+                    duration: 1000, // Adjust duration as needed (in milliseconds)
+                    easing: 'easeInOutCubic' // Easing function
+                });
+            }
+        });
+    }
+
+    // Call the function initially and on scroll
+    animateIfVisible();
+    $(window).on('scroll', animateIfVisible);
 });
