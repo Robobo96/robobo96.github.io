@@ -5,7 +5,7 @@
 // You have the license to use this code in your projects but not redistribute it to others
 
 // Stagger your animation
- $(".trigger").each(function (i) {
+ $(".products_item-img-wrapper").each(function (i) {
     var $item = $(this); 
     setTimeout(function() { 
       $item.click();
