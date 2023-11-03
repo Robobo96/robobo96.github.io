@@ -12,8 +12,8 @@ $(document).ready(function() {
                 'grid-row': 'auto / span 2'
             });
 
-    // Check and insert empty divs at positions 3, 14, 25, etc., if the grid has more than those indices' number of children
-    for (var i = 3; i < $productsGrid.children().length; i += 11) {
+    // Check and insert empty divs at positions 3, 15, 26, etc., if the grid has more than those indices' number of children
+    for (var i = 3; i < $productsGrid.children().length; i += 12) {
         if ($productsGrid.children().length > i) {
             $productsGrid.children().eq(i - 1).before($newProductItem.clone());
         }
