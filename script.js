@@ -11,8 +11,9 @@ $(document).ready(function() {
                 'grid-column': 'auto / span 2',
                 'grid-row': 'auto / span 2'
             });
-            
-            $productsGrid.children().eq(2).before($newProductItem.clone()); // Index 2
+            if ($productsGrid.children().length < 3) {
+                        $productsGrid.children().eq(2).before($newProductItem.clone()); // Index 2
+            }
             $productsGrid.children().eq(10).before($newProductItem.clone()); // Index 10
             $productsGrid.children().eq(12).before($newProductItem); // Index 12
         });
