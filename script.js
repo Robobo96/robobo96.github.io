@@ -30,7 +30,7 @@ $(document).ready(function() {
     }
 
     // Check and insert empty divs at positions 13, 25, 37, etc., if the grid has more than those indices' number of children
-    for (var i = 13; i < $productsGrid.children().length; i += 12) {
+    for (var i = 12; i < $productsGrid.children().length; i += 12) {
                 if ($productsGrid.children().length > i) {
                             $productsGrid.children().eq(i - 1).before($newProductItem.clone());
                 }
