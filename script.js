@@ -7,7 +7,7 @@ $(document).ready(function() {
     
     // Apply CSS directly to the 8th and 9th child elements and subsequent ones in the same pattern
     largerimgs.forEach(function(largerimg) {
-        for (var i = largerimg; i < $productsGrid.children().length; i += 12) {
+        for (var i = largerimg; i < $productsGrid.children().length; i += 11) {
             $productsGrid.children().eq(i).add($productsGrid.children().eq(i)).css({
                 'grid-column': 'auto / span 2',
                 'grid-row': 'auto / span 2'
