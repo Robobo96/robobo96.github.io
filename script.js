@@ -3,7 +3,7 @@ $(document).ready(function() {
     var $newProductItem = $('<div class="products_item"></div>');
 
     // Define positions to insert CSS for larger images
-    var largerimgs = [8, 9]; // Positions to insert CSS
+    var largerimgs = [7, 8]; // Positions to insert CSS
     
     // Apply CSS directly to the 8th and 9th child elements and subsequent ones in the same pattern
     largerimgs.forEach(function(largerimg) {
