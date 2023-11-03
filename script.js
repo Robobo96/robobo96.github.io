@@ -1,29 +1,11 @@
-// Wait for the HTML document to be fully loaded and ready
-$(document).ready(function() {
-
-    // Define the grid cells with the class name 'products_grid'
-    var gridCells = $('.products_grid');
-
-    // Loop through each 'products_grid' element found on the page
-    gridCells.each(function(index, element) {
-
-        // Find all the children cells of the current 'products_grid' element
-        var children = $(element).children();
-
-        // Loop through each child cell of the grid
-        children.each(function(childIndex) {
-
-            // Check if the current child cell is the 3rd, 11th, or 13th (0-indexed)
-            if ((childIndex + 1) % 3 === 0 && (childIndex + 1) !== 12) {
-                // Create a new empty div element
-                var newDiv = $('<div></div>');
-
-                // Add the class 'products_item' to the new div
-                newDiv.addClass('products_item');
-
-                // Append the new div to the current child cell
-                $(this).append(newDiv);
-            }
+// Wait for the document (HTML) to be ready before executing any JavaScript/jQuery code
+        $(document).ready(function() {
+            // Select the products_grid element using its class name and store it in a variable
+            var $productsGrid = $('.products_grid');
+            
+            // Create an empty div element using jQuery
+            var $newProductItem = $('<div class="products_item"></div>');
+            
+            // Append the newly created empty div to the products_grid element
+            $productsGrid.append($newProductItem);
         });
-    });
-});
