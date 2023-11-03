@@ -1,11 +1,7 @@
-// Wait for the document (HTML) to be ready before executing any JavaScript/jQuery code
-        $(document).ready(function() {
-            // Select the products_grid element using its class name and store it in a variable
+$(document).ready(function() {
             var $productsGrid = $('.products_grid');
-            
-            // Create an empty div element using jQuery
             var $newProductItem = $('<div class="products_item"></div>');
             
-            // Append the newly created empty div to the products_grid element
-            $productsGrid.append($newProductItem);
+            // Select the third child element (index 2) in the products_grid and insert the new item before it
+            $productsGrid.children().eq(2).before($newProductItem);
         });
