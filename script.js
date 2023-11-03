@@ -20,10 +20,8 @@ $(document).ready(function() {
 
     // Loop through each position and insert an empty div if the grid has more children
     emptydivs.forEach(function(emptydiv) {
-        for (var i = emptydiv; i < $productsGrid.children().length; i += 12) {
-            if ($productsGrid.children().length > i) {
-                $productsGrid.children().eq(i).before($newProductItem.clone());
-            }
+        for (var i = emptydiv; i < $productsGrid.children().length; i += 11) {
+            $productsGrid.children().eq(i).before($newProductItem.clone());
         }
     });
 });
