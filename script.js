@@ -12,10 +12,12 @@ $(document).ready(function() {
                 'grid-row': 'auto / span 2'
             });
 
-            // Check and insert if the grid has more than 3 children before adding an empty div as the 3rd child
-                if ($productsGrid.children().length < 3) {
-                        $productsGrid.children().eq(2).before($newProductItem.clone()); // Index 2
-                }
+    // Check and insert empty divs at positions 3, 14, 25, etc., if the grid has more than those indices' number of children
+    for (var i = 3; i < $productsGrid.children().length; i += 11) {
+        if ($productsGrid.children().length > i) {
+            $productsGrid.children().eq(i - 1).before($newProductItem.clone());
+        }
+    }
             
             $productsGrid.children().eq(10).before($newProductItem.clone()); // Index 10
             $productsGrid.children().eq(12).before($newProductItem); // Index 12
