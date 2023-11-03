@@ -18,6 +18,8 @@
   }
 }
 
+*/
+
 .products_item-img {
   animation-name: slideAndFade;
   animation-duration: 800ms;
@@ -26,8 +28,6 @@
   animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   opacity: 0; /* Set initial opacity to 0 for the animation */
 }
-
-/*
 
 @keyframes slideAndFade {
   0% {
@@ -40,5 +40,5 @@
   }
 }
 
-*/
+
 
