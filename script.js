@@ -16,7 +16,7 @@ $(document).ready(function() {
     });
 
     // Define positions to insert empty divs
-    var emptydivs = [2, 11, 12]; // Positions to insert empty divs
+    var emptydivs = [2, 10, 12]; // Positions to insert empty divs
 
     // Loop through each position and insert an empty div if the grid has more children
     emptydivs.forEach(function(emptydiv) {
