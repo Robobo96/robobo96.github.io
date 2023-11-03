@@ -16,11 +16,11 @@ $(document).ready(function() {
     });
 
     // Define positions to insert empty divs
-    var emptydivs = [2, 10, 12]; // Positions to insert empty divs
+    var emptydivs = [2, 10, 12]; // Positions to insert empty divs 14, 12, 14
 
     // Loop through each position and insert an empty div if the grid has more children
     emptydivs.forEach(function(emptydiv) {
-        for (var i = emptydiv; i < $productsGrid.children().length; i += 11) {
+        for (var i = emptydiv; i < $productsGrid.children().length; i += 14) {
             $productsGrid.children().eq(i).before($newProductItem.clone());
         }
     });
