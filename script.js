@@ -11,14 +11,25 @@ $(document).ready(function() {
                 'grid-column': 'auto / span 2',
                 'grid-row': 'auto / span 2'
             });
-
-    // Check and insert empty divs at positions 3, 15, 26, etc., if the grid has more than those indices' number of children
-    for (var i = 3; i < $productsGrid.children().length; i += 12) {
-        if ($productsGrid.children().length > i) {
-            $productsGrid.children().eq(i - 1).before($newProductItem.clone());
-        }
-    }
             
-            $productsGrid.children().eq(10).before($newProductItem.clone()); // Index 10
-            $productsGrid.children().eq(12).before($newProductItem); // Index 12
+            // Check and insert empty divs at positions 3, 15, 26, etc., if the grid has more than those indices' number of children
+            for (var i = 3; i < $productsGrid.children().length; i += 12) {
+                        if ($productsGrid.children().length > i) {
+                                    $productsGrid.children().eq(i - 1).before($newProductItem.clone());
+                        }
+            }
+            
+            // Check and insert empty divs at positions 11, 23, 35, etc., if the grid has more than those indices' number of children
+            for (var i = 11; i < $productsGrid.children().length; i += 12) {
+                        if ($productsGrid.children().length > i) {
+                                    $productsGrid.children().eq(i - 1).before($newProductItem.clone());
+                        }
+            }
+
+            // Check and insert empty divs at positions 13, 25, 37, etc., if the grid has more than those indices' number of children
+            for (var i = 13; i < $productsGrid.children().length; i += 12) {
+                        if ($productsGrid.children().length > i) {
+                                    $productsGrid.children().eq(i - 1).before($newProductItem.clone());
+                        }
+            }
         });
