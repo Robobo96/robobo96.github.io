@@ -60,7 +60,7 @@ for (var i = 11; i < $productsGrid.children().length; i += 15) {
     $productsGrid.children().eq(i - 1).before($clonedItem);
 }
 
-for (var i = 13; i < $productsGrid.children().length; i += 12) {
+for (var i = 13; i < $productsGrid.children().length; i += 14) {
     var $clonedItem = $newProductItem.clone();
     $clonedItem.text('Index: ' + i + ' - ' + $clonedItem.text());
     $productsGrid.children().eq(i - 1).before($clonedItem);
