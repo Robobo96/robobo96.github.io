@@ -44,7 +44,7 @@ $(document).ready(function() {
         $productsGrid.children().eq(i - 1).before($newProductItem.clone());
     }
 
-    for (var i = 12; i < $productsGrid.children().length; i += 12) {
+    for (var i = 13; i < $productsGrid.children().length; i += 12) {
         $productsGrid.children().eq(i - 1).before($newProductItem.clone());
     }
 
