@@ -48,7 +48,7 @@ $(document).ready(function() {
         $productsGrid.children().eq(i - 1).before($newProductItem.clone());
     }*/
 
-for (var i = 3; i < $productsGrid.children().length; i += 12) {
+for (var i = 3; i < $productsGrid.children().length; i += 14) {
     var $clonedItem = $newProductItem.clone();
     $clonedItem.text('Index: ' + i + ' - ' + $clonedItem.text());
     $productsGrid.children().eq(i - 1).before($clonedItem);
