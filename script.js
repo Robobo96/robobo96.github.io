@@ -16,11 +16,15 @@ $(document).ready(function() {
     });
 
     // Check and insert empty divs at positions 3, 15, 26, etc., if the grid has more than those indices' number of children
-    for (var i = 3; i < $productsGrid.children().length; i += 12) {
+    /*for (var i = 3; i < $productsGrid.children().length; i += 12) {
                 if ($productsGrid.children().length > i) {
                             $productsGrid.children().eq(i - 1).before($newProductItem.clone());
                 }
-    }
+    }*/
+
+    for (var i = 3; i < $productsGrid.children().length; i += 12) {
+    $productsGrid.children().eq(i - 1).before($newProductItem.clone());
+}
     
     // Check and insert empty divs at positions 11, 23, 35, etc., if the grid has more than those indices' number of children
     for (var i = 11; i < $productsGrid.children().length; i += 14) {
