@@ -34,7 +34,7 @@ $(document).ready(function() {
                 if ($productsGrid.children().length > i) {
                             $productsGrid.children().eq(i - 1).before($newProductItem.clone());
                 }
-    }*/
+    }
 
     for (var i = 3; i < $productsGrid.children().length; i += 12) {
         $productsGrid.children().eq(i - 1).before($newProductItem.clone());
@@ -46,6 +46,25 @@ $(document).ready(function() {
 
     for (var i = 13; i < $productsGrid.children().length; i += 12) {
         $productsGrid.children().eq(i - 1).before($newProductItem.clone());
-    }
+    }*/
+
+for (var i = 3; i < $productsGrid.children().length; i += 12) {
+    var $clonedItem = $newProductItem.clone();
+    $clonedItem.text('Index: ' + i + ' - ' + $clonedItem.text());
+    $productsGrid.children().eq(i - 1).before($clonedItem);
+}
+
+for (var i = 11; i < $productsGrid.children().length; i += 12) {
+    var $clonedItem = $newProductItem.clone();
+    $clonedItem.text('Index: ' + i + ' - ' + $clonedItem.text());
+    $productsGrid.children().eq(i - 1).before($clonedItem);
+}
+
+for (var i = 13; i < $productsGrid.children().length; i += 12) {
+    var $clonedItem = $newProductItem.clone();
+    $clonedItem.text('Index: ' + i + ' - ' + $clonedItem.text());
+    $productsGrid.children().eq(i - 1).before($clonedItem);
+}
+
 
 });
